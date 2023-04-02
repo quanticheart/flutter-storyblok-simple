@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 Future<Fetch?> fetchStory(String name) async {
   var url = Uri.https('api.storyblok.com', '/v1/cdn/stories/$name',
-      {'token': 'UIDgXtBRksZ2Iui9YoWzaAtt', 'version': 'draft'});
+      {'token': '----', 'version': 'draft'});
 
   final http.Response response = await http.get(url);
 
@@ -20,7 +20,7 @@ Future<Fetch?> fetchStory(String name) async {
 Future<List<Fetch>?> fetch() async {
   var url = Uri.https('api.storyblok.com', '/v1/cdn/stories', {
     'per_page': '100',
-    'token': 'UIDgXtBRksZ2Iui9YoWzaAtt',
+    'token': '----',
     'version': 'draft'
   });
 
